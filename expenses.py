@@ -1,13 +1,12 @@
 class Expense:
-    def __init__(self, date, currency, name, amount, category, reciever, account, note) -> None:
-        self.date = date               # date of an expense
-        self.currency = currency       # currency of an expense
-        self.name = name               # name of an expense
-        self.amount = amount           # expense's amount
-        self.category = category       # expense's category
-        self.reciever = reciever       # reciever of an expense
-        self.account = account         # 3 letter account shortcut, from which an expense was made
-        self.note = note               # short description of an expense
+    def __init__(self, date, currency, name, amount, category, reciever, account) -> None:
+        self.date = date               # Dátum výdaju
+        self.currency = currency       # Mena v ktorej nastal výdaj
+        self.name = name               # Názov výdaju
+        self.amount = amount           # Hodnota výdaju
+        self.category = category       # Kategória výdaju
+        self.reciever = reciever       # Príjemca výdaju
+        self.account = account         # Názov účtu, z ktorého bol zaznamenaný výdaj
 
-    def __repr__(self):
-        return f"<Expense: {self.date}, {self.currency}, {self.name}, ${self.amount:.2f}, {self.category}, {self.reciever}, {self.account}, {self.note} >"
+    def __repr__(self): # Reprezentácia celkového záznamu výdaju vo forme dátového typu string (inak adresa pamäťe!)
+        return f"Výdaj: {self.date}, {self.currency}, {self.amount:.2f}, {self.name}, {self.category}, {self.reciever}, {self.account}"
